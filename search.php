@@ -14,17 +14,11 @@
     </p>
     <div class="portfolio-wrapper">
 <?php
-    $url = 'http://localhost:8080/search?search-text='.$sanitized;
-    $raw = file_get_contents($url);
-    $json = json_decode($raw);
-    $projects = $json->{'projects'};
-        for ($i = 0; $i < sizeof($projects); $i++) {
+    for ($i = 0; $i < sizeof($projects); $i++) {
         $project = $projects[$i];
         include 'project.php';
-        }
+    }
 ?>
-
-
     </div><!-- end portfolio-wrapper -->
 
 </div><!-- end col -->
